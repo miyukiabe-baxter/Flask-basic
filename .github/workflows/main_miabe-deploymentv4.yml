@@ -50,6 +50,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
+    __environment__
     
     steps:
       - name: Download artifact from build job
@@ -67,4 +68,4 @@ jobs:
           app-name: 'miabe-deploymentv4'
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_408FBEF1BEC6414DAC821244625155BB }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4DF2A70A1D214003A67AEBBD515D316F }}
